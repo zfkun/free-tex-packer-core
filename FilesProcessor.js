@@ -35,6 +35,10 @@ class FilesProcessor {
                                 });
 
                                 ix++;
+
+                                if (options.allowSort) {
+                                    item.data = item.data.sort((a, b) => a.name.localeCompare(b.name));
+                                }
                             }
                         }
                     });

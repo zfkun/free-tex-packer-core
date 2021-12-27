@@ -40,6 +40,7 @@ function packAsync(images, options) {
     options.fixedSize = options.fixedSize === undefined ? false : options.fixedSize;
     options.padding = options.padding === undefined ? 0 : options.padding;
     options.extrude = options.extrude === undefined ? 0 : options.extrude;
+    options.allowSort = options.allowSort === undefined ? true : options.allowSort;
     options.allowRotation = options.allowRotation === undefined ? true : options.allowRotation;
     options.detectIdentical = options.detectIdentical === undefined ? true : options.detectIdentical;
     options.allowTrim = options.allowTrim === undefined ? true : options.allowTrim;
@@ -80,6 +81,7 @@ function packAsync(images, options) {
         exporter = options.exporter;
     }
 
+    if(!exporter.allowSort) options.allowSort = false;
 	if(!exporter.allowRotation) options.allowRotation = false;
 	if(!exporter.allowTrim) options.allowTrim = false;
 

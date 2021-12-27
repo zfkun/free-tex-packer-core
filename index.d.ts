@@ -173,6 +173,12 @@ export interface TexturePackerOptions {
    */
   extrude?: number;
   /**
+   * Allow sorting result
+   *
+   * @default true
+   */
+   allowSort?: boolean;
+  /**
    * Allow image rotation
    * @default true
    */
